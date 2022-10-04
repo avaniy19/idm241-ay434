@@ -1,0 +1,57 @@
+@font-face {
+    font-family: manropeBold;
+    src: url(fonts/Manrope-ExtraBold.ttf);
+  }
+
+  @font-face {
+    font-family: manrope;
+    src: url(fonts/Manrope-Regular.ttf);
+  }
+body {
+    background-color: #9897A8;
+    color: white;
+    font-family: manrope, Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+a:link, a:visited {
+    color:white;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+a:hover{
+    opacity: 75%;
+}
+
+
+h1 {
+    font-family: manropeBold, Helvetica, sans-serif;
+}
+
+h4 {
+    font-family: manropeBold, Helvetica, sans-serif;
+    display: inline-block; 
+	text-align: left;
+
+}
+
+.description {
+    text-align: center;
+}
+
+ul, ol{
+    display: inline-block; 
+	text-align: left;
+}
+
+/*
+h2 {
+
+}
+
+
+*/
+
