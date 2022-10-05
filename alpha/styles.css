@@ -11,7 +11,7 @@
 
 body {
     background-color: #9695B9;
-    color: #363960;
+    color: #292B50;
     font-family: manrope, Helvetica, sans-serif;
     text-align: center;
     letter-spacing: 1px;
@@ -32,22 +32,45 @@ h1 {
     font-family: manropeBold, Helvetica, sans-serif;
 }
 
+
+
+ .section {
+     display: block;
+     text-align: center;
+     padding-left:30%;
+     padding-right: 30%;
+ }
+
+.section__header {
+    text-indent: 20px;
+    display: block;
+    text-align: left ;
+    background-color: #B3AECC;
+    border-radius: 25px;
+}
+
 h4 {
     font-family: manropeBold, Helvetica, sans-serif;
-    display: inline-block; 
-	text-align: left;
+    margin-bottom: -5px;
+
+    /* display: block; 
+	text-align: left; */
 
 }
 
-.description {
+/* .description {
     text-align: center;
 
-}
+} */
 
 ul, ol{
-    display: inline-block; 
+    display: block; 
 	text-align: left;
     color: white;
+}
+
+li {
+    margin-bottom: 5px;
 }
 
 img {
@@ -67,7 +90,12 @@ img {
     }
 
     h4{
-        margin-bottom: -20px;
+        margin-bottom: -15px;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
