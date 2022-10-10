@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+.alpha__microinteraction {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80%;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: inline;
+}
