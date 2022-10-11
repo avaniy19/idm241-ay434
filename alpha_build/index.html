@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="js/script.js"></script>
     <title>alpha build idm 241</title>
 </head>
 <body>
 
     <div class="alpha__microinteraction">
 
-            <!-- <div class="tire"> -->
+        <!-- <container> -->
+        <div class="tire" >
+        <!-- onclick="myFunction(this)" -->
+        
 
-                            <img src="images/tire.png" alt="tire">
-                            
-            <!-- </div> -->
+           <img src="images/tire.png" alt="tire">
+            
+        </div>
 
-            <!-- <div class="menu">
-                            <ul> -->
-
-
-                                <!-- <li id="music"> music </li>
+            <div class="menu"> 
+                            <ul>
+                                <li id="music"> music </li>
 
                                 <li id="merch"> merch </li>
 
                                 <li id="video"> video </li>
 
-                                <li id="photo__diary"> photo diary </li> -->
-                            <!-- </ul>
-            </div> -->
-
+                                <li id="photo__diary"> photo diary </li>
+                            </ul>
+            </div>
+        <!-- </container> -->
     </div>
-
+    
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+        </script>
+    
     
 </body>
 </html>

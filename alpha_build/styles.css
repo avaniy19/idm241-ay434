@@ -5,7 +5,110 @@ body {
 .alpha__microinteraction {
     margin-right: auto;
     margin-left: auto;
-    max-width: 80%;
+    max-width: 70%;
+    height: 200px;
+    overflow: hidden;
+
+    /* helping visualize */
+    border: 3px solid green; 
+
+    /* centering microinteraction */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*hover off animation*/
+    
+}
+
+
+img {
+    max-width: 100px;    
+    position: relative;
+    /* animation: 3s ease-in-out .25s tire__spinOUT; */
+}
+
+.tire {
+    /* cursor: pointer; */
+    position: relative;
+    top: 100px;
+    left: 0px;
+    /* transform: translateY(0);
+    transform: translateX(0);
+    transition-property: translateX(), translateY();
+    transition-duration: 2s, 2s;
+    transition-delay: 0s, .25s;
+    transition-timing-function: ease-in-out; */
+}
+
+/* img:hover*/ 
+.tire:hover { 
+    /* animation: 3s ease-in-out .25s tire__spinIN;
+    animation-fill-mode: forwards; */
+    /* transform: translateX(-100px);
+    transform: translateY(-100px); */
+    animation: all 2s;
+    animation-delay: 1s;
+}
+
+@keyframes all {
+    0%   {
+        top: -100px;
+    }
+
+    50%  {
+        left: 100px;
+    }
+    
+    100% {
+        left: 525px;
+        
+    }
+}
+
+
+
+
+
+/* @keyframes tire__spinIN {
+    0% {
+        transform: translateY();
+        transform: translateX(0)
+    }
+  
+    35% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        transform: translateX(525px);
+
+    }
+  }
+
+  @keyframes tire__spinOUT {
+    0% {
+        transform: rotate(360deg);
+        transform: translateX(-525px);
+        
+        
+    }
+  
+    35% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: translateY();
+
+    }
+  } */
+  
+
+.menu {
+    display: inline;
+    margin-left: -10px;
 }
 
 ul {
@@ -13,3 +116,10 @@ ul {
     overflow: hidden;
     display: inline;
 }
+
+li {
+    font-size: 28px;
+    display: inline;
+    padding-right: 10px;
+}
+
