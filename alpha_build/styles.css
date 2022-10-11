@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    font-family: sans-serif;
+    color: white;
+    background-color: #9695B9;
 }
 
 .alpha__microinteraction {
@@ -11,7 +14,7 @@ body {
     overflow: hidden;
 
     /* helping visualize */
-    border: 3px solid green; 
+    border: 3px solid white; 
 
     /* centering microinteraction */
     display: flex;
@@ -109,17 +112,77 @@ ul {
 
 li {
     opacity: 0;
-
+    animation: fadeIn 0.9s 1;
+  
+    animation-fill-mode: forwards;
     font-size: 28px;
     display: inline;
     padding-right: 10px;
 }
 
-.alpha__microinteraction:hover #music #merch #video #photo__diary {
-    animation: fadeIn 2s ease-in-out 1s;
+.alpha__microinteraction:hover > li {
+    animation: fadeIn 0.9s 1;
+    animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+
+li:nth-child(5n+1) {
+    animation-delay: 0.5s;
+  }
+  
+  li:nth-child(5n+2) {
+    animation-delay: 1.0s;
+  }
+  
+  li:nth-child(5n+3) {
+    animation-delay: 1.5s;
+  }
+  
+  li:nth-child(5n+4) {
+    animation-delay: 2.0s;
+  }
+  
+  li:nth-child(5n+5) {
+    animation-delay: 2.5s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.0;
+    }
+    100% {
+      opacity: 1.0;
+    }
+  }
+
+
+  * {
+        box-sizing: border-box;
+      }
+      
+.description {
+    margin-left: 20%;
+    margin-right: 20%;
 }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .column {
+        flex: 25%;
+        padding: 20px;
+        text-align: left ;
+      }
+      
+      @media screen and (max-width: 992px) {
+        .column {
+          flex: 50%;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
