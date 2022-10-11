@@ -5,7 +5,8 @@ body {
 .alpha__microinteraction {
     margin-right: auto;
     margin-left: auto;
-    max-width: 70%;
+    max-width: 50%;
+    padding-left: -20px;
     height: 200px;
     overflow: hidden;
 
@@ -16,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
     /*hover off animation*/
     
@@ -30,41 +32,28 @@ img {
 
 .tire {
     /* cursor: pointer; */
+    display: inline-block;
+    /* padding-right: 100px; */
     position: relative;
-    top: 100px;
-    left: 0px;
-    /* transform: translateY(0);
-    transform: translateX(0);
-    transition-property: translateX(), translateY();
-    transition-duration: 2s, 2s;
-    transition-delay: 0s, .25s;
-    transition-timing-function: ease-in-out; */
+    /* top: 100px;
+    left: 0px; */
+
+    transition: all;
+    transition-duration: 2s;
+    transition-delay: .25s;
+    transition-timing-function: ease-in-out;
 }
 
 /* img:hover*/ 
 .tire:hover { 
     /* animation: 3s ease-in-out .25s tire__spinIN;
     animation-fill-mode: forwards; */
-    /* transform: translateX(-100px);
-    transform: translateY(-100px); */
-    animation: all 2s;
-    animation-delay: 1s;
+    /* transform: translateY(-100px); */
+    transform: translateX(525px) rotate(360deg);
 }
 
-@keyframes all {
-    0%   {
-        top: -100px;
-    }
 
-    50%  {
-        left: 100px;
-    }
-    
-    100% {
-        left: 525px;
-        
-    }
-}
+
 
 
 
@@ -107,19 +96,30 @@ img {
   
 
 .menu {
-    display: inline;
+    display: absolute;
     margin-left: -10px;
 }
 
 ul {
     list-style-type: none;
     overflow: hidden;
-    display: inline;
+    display: inline-block;
+    margin-left: -10px;
 }
 
 li {
+    opacity: 0;
+
     font-size: 28px;
     display: inline;
     padding-right: 10px;
 }
 
+.alpha__microinteraction:hover #music #merch #video #photo__diary {
+    animation: fadeIn 2s ease-in-out 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
