@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 
     /* helping visualize */
-    border: 3px solid white; 
+    /* border: 3px solid white;  */
 
     /* centering microinteraction */
     display: flex;
@@ -33,14 +33,15 @@ img {
     /* animation: 3s ease-in-out .25s tire__spinOUT; */
 }
 
+/* .tire_container {
+    padding-left: 10rem;
+} */
 .tire {
     /* cursor: pointer; */
     display: inline-block;
     /* padding-right: 100px; */
     position: relative;
-    /* top: 100px;
-    left: 0px; */
-
+    left: 4rem;
     transition: all;
     transition-duration: 2s;
     transition-delay: .25s;
@@ -99,8 +100,9 @@ img {
   
 
 .menu {
-    display: absolute;
-    margin-left: -10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 ul {
@@ -110,22 +112,47 @@ ul {
     margin-left: -10px;
 }
 
+/* .content:hover {
+
+} */
+
 li {
-    opacity: 0;
-    animation: fadeIn 0.9s 1;
-  
+    color: #9695B9;
+    /* animation: fadeIn .9s 1; */
     animation-fill-mode: forwards;
     font-size: 28px;
     display: inline;
     padding-right: 10px;
 }
 
-.alpha__microinteraction:hover > li {
+
+/* li:hover{
     animation: fadeIn 0.9s 1;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+} */
+
+.menu:hover .music {
+    animation: fadeIn 1s ease-in-out .5s;
     animation-fill-mode: forwards;
 }
 
+.menu:hover .merch {
+    animation: fadeIn 1s ease-in-out 1s;
+    animation-fill-mode: forwards;
+}
 
+.menu:hover .video {
+    animation: fadeIn 1s ease-in-out 1.25s;
+    animation-fill-mode: forwards;
+
+}
+
+.menu:hover .photo__diary {
+    animation: fadeIn 1s ease-in-out 1.5s;
+    animation-fill-mode: forwards;
+}
+/* 
 li:nth-child(5n+1) {
     animation-delay: 0.5s;
   }
@@ -140,18 +167,19 @@ li:nth-child(5n+1) {
   
   li:nth-child(5n+4) {
     animation-delay: 2.0s;
-  }
+  } */
+
+
+
   
-  li:nth-child(5n+5) {
-    animation-delay: 2.5s;
-  }
+
 
   @keyframes fadeIn {
     0% {
-      opacity: 0.0;
+      color: #9695B9;
     }
     100% {
-      opacity: 1.0;
+      color: white;
     }
   }
 
