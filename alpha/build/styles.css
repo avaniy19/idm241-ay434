@@ -6,114 +6,150 @@ body {
 }
 
 .alpha__microinteraction {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: -20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: -20px;
 
-    max-width: 50%;
-    height: 200px;
+  max-width: 50%;
+  height: 200px;
 
-    overflow: hidden;
+  /* overflow: hidden; */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 
 img {
-    max-width: 100px;    
-    position: relative;
+  max-width: 100px;    
+  position: relative;
 }
 
 .tire {
-    display: inline-block;
+  display: inline-block;
 
-    position: relative;
-    left: 4rem;
+  position: relative;
+  left: 4rem;
 
-    transition: all;
-    transition-duration: 2s;
-    transition-delay: .25s;
-    transition-timing-function: ease-in-out;
+  transition: all;
+  transition-duration: 2s;
+  transition-delay: .25s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 
-.tire:hover {
-    transform: translateX(525px) rotate(360deg);
+.tire.animate {
+  transform: translateX(525px) rotate(360deg);
 }
 
 h1 {
-    text-decoration-line: underline;
-    text-decoration-thickness: 6%;
-    text-underline-offset: 5px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 6%;
+  text-underline-offset: 5px;
 }
 
+
+a:link, a:visited {
+  color:white;
   
-  a:link, a:visited {
-    color:white;
-    
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1.5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
 }
 
 
 .menu {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 ul {
-    list-style-type: none;
-    overflow: hidden;
-    display: inline-block;
-    margin-left: -10px;
+  list-style-type: none;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -10px;
+  /* visibility: hidden; */
 }
 
+menu.animate ul{
+  animation: 0.75s ease 0s normal forwards 1 UlFadeIn;
+}
 
-li {
+@keyframes UlFadeIn{
+  0% {
     color: #9695B9;
-    /* animation: fadeIn .9s 1; */
-    animation-fill-mode: forwards;
-    font-size: 28px;
-    display: inline;
-    padding-right: 10px;
+  }
+  100% {
+    color: white;
+  }
 }
 
 
-.menu:hover .music {
-    animation: fadeIn 1s ease-in-out .5s;
-    animation-fill-mode: forwards;
+.menu__item {
+  color: #9695B9;
+  /* animation: fadeIn .9s 1; */
+  animation-fill-mode: forwards;
+  font-size: 28px;
+  display: inline;
+  padding-right: 10px;
+}
+
+/* .menu:hover .music {
+  animation: fadeIn 1s ease-in-out .5s;
+  animation-fill-mode: forwards;
 }
 
 .menu:hover .merch {
-    animation: fadeIn 1s ease-in-out 1s;
-    animation-fill-mode: forwards;
+  animation: fadeIn 1s ease-in-out 1s;
+  animation-fill-mode: forwards;
 }
 
 .menu:hover .video {
-    animation: fadeIn 1s ease-in-out 1.25s;
-    animation-fill-mode: forwards;
+  animation: fadeIn 1s ease-in-out 1.25s;
+  animation-fill-mode: forwards;
 
 }
 
 .menu:hover .photo__diary {
-    animation: fadeIn 1s ease-in-out 1.5s;
-    animation-fill-mode: forwards;
+  animation: fadeIn 1s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
+} */
+
+
+
+.menu__item.animate #music.animate {
+  animation: fadeIn 1s ease-in-out .5s;
+  animation-fill-mode: forwards;
 }
 
+.menu__item.animate #merch.animate {
+  animation: fadeIn 1s ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
 
-  @keyframes fadeIn {
-    0% {
-      color: #9695B9;
-    }
-    100% {
-      color: white;
-    }
+.menu__item.animate #video.animate {
+  animation: fadeIn 1s ease-in-out 1.25s;
+  animation-fill-mode: forwards;
+
+}
+
+.menu__item.animate #photo__diary.animate {
+  animation: fadeIn 1s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    color: #9695B9;
   }
+  100% {
+    color: white;
+  }
+}
 
 
 /* flex box for description */
@@ -142,11 +178,26 @@ li {
         .column {
           flex: 50%;
         }
+
+        .tire.animate {
+          transform: translateX(300px) rotate(360deg);
+        }
+
+        .tire {
+          left: 0rem;
+        }
       }
       
       @media screen and (max-width: 600px) {
         .row {
           flex-direction: column;
+        }
+        .tire.animate {
+          transform: translateX(125px) rotate(360deg);
+        }
+        
+        .tire {
+          left: 0rem;
         }
       }
 
@@ -154,7 +205,7 @@ li {
 
 
 
-      /* scrap code */
+                                    /* scrap code */
 
       /* @keyframes tire__spinIN {
     0% {

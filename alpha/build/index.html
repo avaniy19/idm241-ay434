@@ -1,70 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript" src="js/script.js"></script>
-    <title>alpha build idm 241</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/anime.min.js"></script>
+  <title>alpha build idm 241</title>
 </head>
+
 <body>
-    <h1> idm 241 microinteraction: </h1>
+  <h1> idm 241 microinteraction: </h1>
 
-    <div class="alpha__microinteraction">
+  <div class="alpha__microinteraction">
 
-            <div class="menu"> 
-
-
-                        <div class="tire" >
-                            <img src="images/tire.png" alt="tire">
-                        </div>
+                <div class="tire" >
+                    <img src="images/tire.png" alt="tire">
+                </div>
 
 
-                    <ul>
-                        <li class= "music" id="music"> music </li>
 
-                        <li class= "merch" id="merch"> merch </li>
+                <div class="menu"> 
+            <ul>
+                <li class= "menu__item" id="music"> music </li>
 
-                        <li class= "video" id="video"> video </li>
+                <li class= "menu__item" id="merch"> merch </li>
 
-                        <li class= "photo__diary" id="photo__diary"> photo diary </li>
-                    </ul>  
+                <li class= "menu__item" id="video"> video </li>
 
-            </div>
+                <li class= "menu__item" id="photo__diary"> photo diary </li>
+            </ul>  
+
+
     </div>
-    
-    <div class="description">
- 
+</div>
+
+<script>
+
+document.querySelector(".tire").addEventListener("click", function () {
+	document.querySelector(".tire").classList.add("animate");
+});
+
+document.querySelector(".tire").addEventListener("click", function () {
+	document.querySelector(".menu").classList.add("animate");
+});
+
+// document.querySelector(".tire").addEventListener("click", function () {
+// 	document.querySelector(".tire").classList.remove("animate");
+// });
+
+
+</script>
+
+<div class="description">
+
 <h1> alpha description:</h1>
 
-        <div class="row">
-            <div class="column" >
-              <h2>triggers</h2>
-              <p>   - hover on tire image</p>
-            </div>
-            
-            <div class="column" >
-              <h2>rules</h2>
-              <p> - tire moves right + rotates 360 degrees </p>
-              <p> - as tire moves, menu items individually fade-in 0%-100% opacity</p>
-            </div>
-            
-            <div class="column">
-              <h2>feedback</h2>
-              <p> - tire moves right + rotates 360 degrees </p>
-              <p> - as tire moves, menu items individually fade-in 0%-100% opacity</p>
-            </div>
-            
-            <div class="column">
-              <h2>loops + modes</h2>
-              <p> - n/a</p>
-            </div>
-          </div>
-          <h4> images courtesy of <a href="https://www.szactrl.com/">szactrl.com</a> </h4>
-
-
-
+<div class="row">
+    <div class="column" >
+      <h2>triggers</h2>
+      <p>   - click on tire image</p>
     </div>
+    
+    <div class="column" >
+      <h2>rules</h2>
+      <p> - tire moves right + rotates 360 degrees </p>
+      <p> - cursor changes to a pointer when user hovers over image </p>
+
+      <!-- <p> - as tire moves, menu items individually fade-in 0%-100% opacity</p> -->
+    </div>
+    
+    <div class="column">
+      <h2>feedback</h2>
+      <p> - tire moves right + rotates 360 degrees </p>
+      <p> - cursor changes to a pointer when user hovers over image </p>
+
+      <!-- <p> - as tire moves, menu items individually fade-in 0%-100% opacity</p> -->
+    </div>
+    
+    <div class="column">
+      <h2>loops + modes</h2>
+      <p> - n/a</p>
+    </div>
+  </div>
+  <h4> images courtesy of <a href="https://www.szactrl.com/" target="_blank">szactrl.com</a> </h4>
+
+
+
+</div>
 </body>
+
 </html>
