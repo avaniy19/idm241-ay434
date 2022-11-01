@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
-    <title>idm241 beta</title>
+    <title>idm241 beta build</title>
 </head>
 <body>
 
@@ -16,14 +16,47 @@
             
     </header>
 
-
     <br>
-    <div class="beta_build">
+
+    <div class="beta__build">
         
-       
+            <div class="container">
+
+                <div class="flex__container" id="nav">
+
+                <!-- tire image - click to start -->
+
+                <button class="flex__child tire tireMove tireRoll" id="tire__anim" type="button">
+                    <div>
+                        <img src="images/tire.png" alt="tire">
+                    </div>
+                </button>
+                
+                <!-- menu items appear -->
+
+                                    <ul class="flex__child menu" id="menu">
+
+                                        <b>
+
+                                            <li class="music_1 menu__item color__change" id="music_1"> music </li>
+
+                                            <li class="merch_2 menu__item color__change" id="merch_2"> merch </li>
+
+                                            <li class="video_3 menu__item color__change" id="video_3"> video </li>
+
+                                            <li class="photodiary_4 menu__item color__change" id="photodiary_4"> photo diary </li>
+
+                                        </b>
+
+                                    </ul>
+
+                        </div>
+
+            </div>
 
     </div>
 
+    <br>
 
     <div class="description">
             <!-- <h2> alpha description </h2> -->
@@ -53,7 +86,9 @@
                                     <li>increase scale &#8594; reset scale &#8594; increase scale &#8594; reset scale &#8594; pause </li>
                                     <li>&#8634; restart </li>
                                 </div> -->
-                                <li> mouse <b>hovering off</b> the entire microinteraction, tire moves right, and rotates 360° total. as mouse overlaps each menu item, menu item fades out to 0 opacity. </li>   
+                                <li> mouse <b>hovering off</b> the entire microinteraction, tire moves right
+                                    <!-- and rotates 360° total -->
+                                    . as mouse overlaps each menu item, menu item fades out to 0 opacity. </li>  
                             </ul>
             </div>
 
@@ -71,7 +106,9 @@
                                     <li>increase scale &#8594; reset scale &#8594; increase scale &#8594; reset scale &#8594; pause </li>
                                     <li>&#8634; restart </li>
                                 </div> -->
-                                <li> mouse <b>hovering off</b> the entire microinteraction, tire moves right, and rotates 360° total. as mouse overlaps each menu item, menu item fades out to 0 opacity. </li>   
+                                <li> mouse <b>hovering off</b> the entire microinteraction, tire moves right
+                                    <!-- and rotates 360° total -->
+                                    . as mouse overlaps each menu item, menu item fades out to 0 opacity. </li>   
                             </ul>
 
                             <!-- more visual description on what the user sees
@@ -96,9 +133,12 @@
             </div>
 
     </div>
-
+<br>
+    <h4> images courtesy of <a href="https://www.szactrl.com/" target="_blank">szactrl.com</a> </h4>
 
 </main>
-
 </body>
+
+            <script src="main.js"></script>
+
 </html>

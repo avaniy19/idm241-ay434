@@ -8,9 +8,10 @@
     src: url(fonts/Manrope-Regular.ttf);
   }
 
+/* description */
 
 body {
-    background-color: #D6D1CB;
+    background-color: #f1ece5;
     color: #2F2D2C;
     font-family: manrope, Helvetica, sans-serif;
     text-align: center;
@@ -33,13 +34,6 @@ h1 {
     color:#456852;
 }
 
-.indent {
-    font-size: smaller;
-    padding-left: 5%;
-    /* list-style: none; */
-}
-
-
 
  .section {
      display: block;
@@ -56,26 +50,12 @@ h1 {
     border-radius: 25px;
 }
 
-.image__header {
-    display: block;
-    text-align: center;
-    padding-bottom: 10px;
-    color:#456852;
-}
 
 h4 {
     font-family: manropeBold, Helvetica, sans-serif;
     margin-bottom: -5px;
 
-    /* display: block; 
-	text-align: left; */
-
 }
-
-/* .description {
-    text-align: center;
-
-} */
 
 ul, ol{
     display: block; 
@@ -87,21 +67,173 @@ li {
     margin-bottom: 5px;
 }
 
-img {
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 6px;
-    border-color: #C3B19E;
-    margin-top: 10px;
 
-    max-width: 50%;
+/* micro interaction */
+
+
+.flex__container {
+    display: flex;
+    justify-content: center;
+
 }
+
+
+.beta__build {
+    /* display: inline-block!important; */
+    margin-bottom: 25px;
+}
+
+img {
+    max-width: 100px;
+    vertical-align:middle;
+    /* display: inline-block; */
+    position: relative;
+}
+
+.tire {
+    /* display: inline-block; */
+    transform:rotate(0deg);
+
+}
+
+/* uncomment for final */
+
+button.tire {
+    /* display: inline-block; */
+    position: relative;
+    background-color: transparent;
+    border: none;
+    /* transition: transform .5s ease-out .02s; */
+}
+
+button.tire:hover {
+    cursor: pointer;
+    /* transform:scale(1.1,1.1); */
+}
+
+@keyframes roll {
+
+  100% {
+    transform: rotate(360deg); 
+}
+}
+
+/* @keyframes moveX {
+
+
+  100% {
+    transform: translateX(50px); 
+}
+} */
+
+
+.tire--roll {
+    /* animation: roll 1.25s ease-in-out 0s forwards; */
+    /* animation: moveX 1.25s ease-in-out 0s forwards; */
+    transform:rotate(360deg);
+    transition: transform 1s ease-out .1s;
+
+}
+
+.tire--move {
+    transform: translateX(-50px);
+}
+
+
+
+.menu {
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 20px;
+    cursor: default!important;
+}
+
+
+.menu__item, .music_1, .merch_2, .video_3, .photodiary_4 {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 24px;
+    opacity: 0;
+    vertical-align:middle;
+}
+
+
+.menu__item:hover {
+    color:#788D64;
+    transition: color 0.75s ease;
+
+}
+
+/* each menu item fades in */
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+
+  100% {
+        opacity: 1; 
+}
+}
+
+@keyframes fadeOut {
+    0% { 
+        opacity: 1; 
+    }
+
+  100% {
+        opacity: 0; 
+}
+}
+
+
+/* when tire is clicked */
+.music_1--animIn {
+    display: inline-block;
+    animation: fadeIn 1.25s ease-in-out .25s forwards;
+}
+
+.merch_2--animIn {
+    display: inline-block;
+    animation: fadeIn 1.25s ease-in-out .5s forwards;
+}
+
+.video_3--animIn {
+    display: inline-block;
+    animation: fadeIn 1.25s ease-in-out .75s forwards;
+}
+
+.photodiary_4--animIn {
+    display: inline-block;
+    animation: fadeIn 1.25s ease-in-out 1s forwards;
+}
+
+/* when microinteraction is hover off ( fade anim) */
+.music_1--animOut {
+    display: inline-block;
+    animation: fadeOut 1.25s ease-in-out .1s forwards;
+}
+
+.merch_2--animOut {
+    display: inline-block;
+    animation: fadeOut 1.25s ease-in-out .75s forwards;
+}
+
+.video_3--animOut {
+    display: inline-block;
+    animation: fadeOut 1.25s ease-in-out .5s  forwards;
+}
+
+.photodiary_4--animOut {
+    display: inline-block;
+    animation: fadeOut 1.25s ease-in-out .25s forwards;
+}
+
+/* media queries: 800px only */
 
 @media only screen and (max-width: 800px) {
 
-    img{
-        max-width: 90%;
-    }
 
     h4{
         margin-bottom: -15px;
