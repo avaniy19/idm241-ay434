@@ -146,7 +146,6 @@ button.tire:hover {
     text-align: center;
     display: inline-block;
     padding-top: 20px;
-    cursor: default!important;
 }
 
 
@@ -162,6 +161,8 @@ button.tire:hover {
 .menu__item:hover {
     color:#788D64;
     transition: color 0.75s ease;
+    cursor: pointer!important;
+
 
 }
 
