@@ -9,8 +9,9 @@
 
         const container = document.querySelector('.container');
         const button = document.querySelector('.tire');
-        const button__Roll = document.querySelector('.tireRoll');
+        // const button__Roll = document.querySelector('.tireRoll');
         const button__Move = document.querySelector('.tireMove');
+        const button__Roll = document.querySelector('.tireRotate');
         const music_1 = document.querySelector('.music_1')
         const merch_2 = document.querySelector('.merch_2')
         const video_3 = document.querySelector('.video_3')
@@ -21,16 +22,15 @@
         button.addEventListener("click", clickAnimation);
 
         function clickAnimation() {
+            button__Move.style.transform = 'translate(540px)'
+            button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
             button__Roll.style.transform = 'rotate(360deg)'
             button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
-            button__Move.style.transform = 'translate(750px)'
-            button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
-            
             // music_1.classList.add('music_1--animIn')
             // merch_2.classList.add('merch_2--animIn')
             // video_3.classList.add('video_3--animIn')
             // photodiary_4.classList.add('photodiary_4--animIn')
-
+            music_1.style.visibility = "visible"
             music_1.style.opacity = '100%'
             music_1.style.transition = 'opacity 1s ease-in-out .25s'
             merch_2.style.opacity = '100%'
@@ -48,10 +48,11 @@
         container.addEventListener("mouseleave", hoverOffTireAnim);
 
         function hoverOffTireAnim() {
-            button__Roll.style.transform = 'rotate(-360deg)'
-            button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
             button__Move.style.transform = 'translate(0px)'
             button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
+            button__Roll.style.transform = 'rotate(-360deg)'
+            button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
+            
             
             music_1.style.opacity = '0%'
             music_1.style.transition = 'opacity 1s ease-in-out .65s'

@@ -69,18 +69,19 @@ li {
 
 
 /* micro interaction */
+.beta__build {
+    /* display: inline-block!important; */
+    margin-bottom: 25px;
+    margin-left: -90px;
+}
 
+.beta__build:hover {
+    cursor:default;
+}
 
 .flex__container {
     display: flex;
     justify-content: center;
-
-}
-
-
-.beta__build {
-    /* display: inline-block!important; */
-    margin-bottom: 25px;
 }
 
 img {
@@ -140,19 +141,22 @@ button.tire:hover {
 }
 
 
-
 .menu {
     list-style: none;
     text-align: center;
     display: inline-block;
     padding-top: 20px;
+    margin-left: -120px;
 }
 
+.music_1 {
+    visibility: hidden;
+}
 
 .menu__item, .music_1, .merch_2, .video_3, .photodiary_4 {
     display: inline-block;
-    margin-right: 50px;
-    font-size: 24px;
+    margin-right: 40px;
+    font-size: 22px;
     opacity: 0;
     vertical-align:middle;
 }
