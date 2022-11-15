@@ -22,7 +22,7 @@
         button.addEventListener("click", clickAnimation);
 
         function clickAnimation() {
-            button__Move.style.transform = 'translate(540px)'
+            button__Move.style.transform = 'translate(560px)'
             button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
             button__Roll.style.transform = 'rotate(360deg)'
             button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
