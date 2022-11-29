@@ -91,11 +91,12 @@ img {
     position: relative;
 }
 
-.tire {
-    /* display: inline-block; */
+/* .tire {
+    display: inline-block;
+    
     transform:rotate(0deg);
 
-}
+} */
 
 /* uncomment for final */
 
@@ -104,41 +105,51 @@ button.tire {
     position: relative;
     background-color: transparent;
     border: none;
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
     /* transition: transform .5s ease-out .02s; */
 }
+
+.tire_move {
+    transform: translateX(550px) scale(1) rotate(360deg);
+  }
 
 button.tire:hover {
     cursor: pointer;
     /* transform:scale(1.1,1.1); */
 }
 
-@keyframes roll {
 
-  100% {
-    transform: rotate(360deg); 
-}
-}
+/* old rotate attempts */
 
-/* @keyframes moveX {
+        /* @keyframes roll {
 
+        100% {
+            transform: rotate(360deg); 
+        }
+        }
 
-  100% {
-    transform: translateX(50px); 
-}
-} */
+        /* @keyframes moveX {
 
 
-.tire--roll {
-    /* animation: roll 1.25s ease-in-out 0s forwards; */
-    /* animation: moveX 1.25s ease-in-out 0s forwards; */
+        100% {
+            transform: translateX(50px); 
+        }
+        } */
+
+
+/* .tire--roll {
+    animation: roll 1.25s ease-in-out 0s forwards;
+    animation: moveX 1.25s ease-in-out 0s forwards;
     transform:rotate(360deg);
     transition: transform 1s ease-out .1s;
 
-}
+} */
 
-.tire--move {
+/* .tire--move {
     transform: translateX(-50px);
-}
+} */
 
 
 .menu {
@@ -153,21 +164,66 @@ button.tire:hover {
     visibility: hidden;
 }
 
-.menu__item, .music_1, .merch_2, .video_3, .photodiary_4 {
+.menu__item {
+    opacity: 0;
     display: inline-block;
     margin-right: 40px;
     font-size: 22px;
-    opacity: 0;
     vertical-align:middle;
 }
 
+.music_1 {
+    transition-property: visibility, opacity;
+    transition-duration: 1.5s;
+    /* transition-delay: .25s; */
+    transition-timing-function: ease-in-out;
+}
+
+.merch_2 {
+    transition-property: visibility, opacity;
+    transition-duration: 1.5s;
+    /* transition-delay: .5s; */
+    transition-timing-function: ease-in-out;
+}
+
+.video_3 {
+    transition-property: visibility, opacity;
+    transition-duration: 1.5s;
+    /* transition-delay: .75s; */
+    transition-timing-function: ease-in-out;
+}
+
+.photodiary_4 {
+    transition-property: visibility, opacity;
+    transition-duration: 1.5s;
+    /* transition-delay: 1s; */
+    transition-timing-function: ease-in-out;
+}
+
+.music_1--FADE {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.merch_2--FADE {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.video_3--FADE {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.photodiary_4--FADE {
+    visibility: visible;
+    opacity: 100%;
+}
 
 .menu__item:hover {
     color:#788D64;
     transition: color 0.75s ease;
     cursor: pointer!important;
-
-
 }
 
 /* each menu item fades in */
@@ -193,47 +249,52 @@ button.tire:hover {
 }
 
 
+/* PREVIOUSLY USED FOR BETA BUILD SUBMISSION */
+
 /* when tire is clicked */
-.music_1--animIn {
-    display: inline-block;
-    animation: fadeIn 1.25s ease-in-out .25s forwards;
-}
+        /* .music_1--animIn {
+            display: inline-block;
+            animation: fadeIn 1.25s ease-in-out .25s forwards;
+        }
 
-.merch_2--animIn {
-    display: inline-block;
-    animation: fadeIn 1.25s ease-in-out .5s forwards;
-}
+        .merch_2--animIn {
+            display: inline-block;
+            animation: fadeIn 1.25s ease-in-out .5s forwards;
+        }
 
-.video_3--animIn {
-    display: inline-block;
-    animation: fadeIn 1.25s ease-in-out .75s forwards;
-}
+        .video_3--animIn {
+            display: inline-block;
+            animation: fadeIn 1.25s ease-in-out .75s forwards;
+        }
 
-.photodiary_4--animIn {
-    display: inline-block;
-    animation: fadeIn 1.25s ease-in-out 1s forwards;
-}
+        .photodiary_4--animIn {
+            display: inline-block;
+            animation: fadeIn 1.25s ease-in-out 1s forwards;
+        } */
 
-/* when microinteraction is hover off ( fade anim) */
-.music_1--animOut {
-    display: inline-block;
-    animation: fadeOut 1.25s ease-in-out .1s forwards;
-}
+/* when microinteraction is hover off (fade anim) */
+        /* .music_1--animOut {
+            display: inline-block;
+            animation: fadeOut 1.25s ease-in-out .1s forwards;
+        }
 
-.merch_2--animOut {
-    display: inline-block;
-    animation: fadeOut 1.25s ease-in-out .75s forwards;
-}
+        .merch_2--animOut {
+            display: inline-block;
+            animation: fadeOut 1.25s ease-in-out .75s forwards;
+        }
 
-.video_3--animOut {
-    display: inline-block;
-    animation: fadeOut 1.25s ease-in-out .5s  forwards;
-}
+        .video_3--animOut {
+            display: inline-block;
+            animation: fadeOut 1.25s ease-in-out .5s  forwards;
+        }
 
-.photodiary_4--animOut {
-    display: inline-block;
-    animation: fadeOut 1.25s ease-in-out .25s forwards;
-}
+        .photodiary_4--animOut {
+            display: inline-block;
+            animation: fadeOut 1.25s ease-in-out .25s forwards;
+        } */
+
+
+
 
 /* media queries: 800px only */
 

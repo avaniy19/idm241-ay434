@@ -7,63 +7,112 @@
 
 // the CSS animation end event listener
 
-        const container = document.querySelector('.container');
-        const button = document.querySelector('.tire');
+
+
+
+
+
+
+
+
+//works but buggy when just hovering over the wheel.
+
+        // const container = document.querySelector('.container');
+        // const button = document.querySelector('.tire');
+
+        const navObj = document.querySelector("#nav");
+        const buttonObj = document.querySelector("#button");
+        const tireObj = document.querySelector(".tire");
+    
+        const music_1 = document.querySelector('.music_1');
+        const merch_2 = document.querySelector('.merch_2');
+        const video_3 = document.querySelector('.video_3');
+        const photodiary_4 = document.querySelector('.photodiary_4');
+        
+       
+       
+        buttonObj.addEventListener("click", () => {
+            
+          tireObj.classList.toggle("tire_move");
+
+          music_1.classList.toggle("music_1--FADE");
+          merch_2.classList.toggle("merch_2--FADE");
+          video_3.classList.toggle("video_3--FADE");
+          photodiary_4.classList.toggle("photodiary_4--FADE");
+        //   music_1.classList.toggle("tire_move");
+        //   merch_2.classList.toggle("tire_move");
+        //   video_3.classList.toggle("tire_move");
+        //   photodiary_4.classList.toggle("tire_move");
+
+            
+            
+
+        });
+
         // const button__Roll = document.querySelector('.tireRoll');
-        const button__Move = document.querySelector('.tireMove');
-        const button__Roll = document.querySelector('.tireRotate');
-        const music_1 = document.querySelector('.music_1')
-        const merch_2 = document.querySelector('.merch_2')
-        const video_3 = document.querySelector('.video_3')
-        const photodiary_4 = document.querySelector('.photodiary_4')
+
 
 
         // click on button
-        button.addEventListener("click", clickAnimation);
+        // button.addEventListener("click", clickAnimation);
 
-        function clickAnimation() {
-            button__Move.style.transform = 'translate(560px)'
-            button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
-            button__Roll.style.transform = 'rotate(360deg)'
-            button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
-            // music_1.classList.add('music_1--animIn')
-            // merch_2.classList.add('merch_2--animIn')
-            // video_3.classList.add('video_3--animIn')
-            // photodiary_4.classList.add('photodiary_4--animIn')
-            music_1.style.visibility = "visible"
-            music_1.style.opacity = '100%'
-            music_1.style.transition = 'opacity 1s ease-in-out .25s'
-            merch_2.style.opacity = '100%'
-            merch_2.style.transition = 'opacity 1s ease-in-out .5s'
-            video_3.style.opacity = '100%'
-            video_3.style.transition = 'opacity 1s ease-in-out .75s'
-            photodiary_4.style.opacity = '100%'
-            photodiary_4.style.transition = 'opacity 1s ease-in-out 1s'
+        // function clickAnimation() {
+        //     button__Move.style.transform = 'translate(560px)'
+        //     button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
+        //     button__Roll.style.transform = 'rotate(360deg)'
+        //     button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
+                        // music_1.classList.add('music_1--animIn')
+                        // merch_2.classList.add('merch_2--animIn')
+                        // video_3.classList.add('video_3--animIn')
+                        // photodiary_4.classList.add('photodiary_4--animIn')
+
+            // music_1.style.visibility = "visible"
+            // music_1.style.opacity = '100%'
+            // music_1.style.transition = 'opacity 1s ease-in-out .25s'
+            // merch_2.style.opacity = '100%'
+            // merch_2.style.transition = 'opacity 1s ease-in-out .5s'
+            // video_3.style.opacity = '100%'
+            // video_3.style.transition = 'opacity 1s ease-in-out .75s'
+            // photodiary_4.style.opacity = '100%'
+            // photodiary_4.style.transition = 'opacity 1s ease-in-out 1s'
             
             
 
-        }
+        
 
         // hover off microinteraction
-        container.addEventListener("mouseleave", hoverOffTireAnim);
+                // container.addEventListener("mouseleave", hoverOffTireAnim);
 
-        function hoverOffTireAnim() {
-            button__Move.style.transform = 'translate(0px)'
-            button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
-            button__Roll.style.transform = 'rotate(-360deg)'
-            button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
-            
-            
-            music_1.style.opacity = '0%'
-            music_1.style.transition = 'opacity 1s ease-in-out .65s'
-            merch_2.style.opacity = '0%'
-            merch_2.style.transition = 'opacity 1s ease-in-out .5s'
-            video_3.style.opacity = '0%'
-            video_3.style.transition = 'opacity 1s ease-in-out .25s'
-            photodiary_4.style.opacity = '0%'
-            photodiary_4.style.transition = 'opacity 1s ease-in-out .1s'
+                // function hoverOffTireAnim() {
+                //     button__Move.style.transform = 'translate(0px)'
+                //     button__Move.style.transition = 'transform 1.5s ease-in-out .1s'
+                //     button__Roll.style.transform = 'rotate(-360deg)'
+                //     button__Roll.style.transition = 'transform 1.5s ease-in-out .1s'
+                    
+                    
+                //     music_1.style.opacity = '0%'
+                //     music_1.style.transition = 'opacity 1s ease-in-out .65s'
+                //     merch_2.style.opacity = '0%'
+                //     merch_2.style.transition = 'opacity 1s ease-in-out .5s'
+                //     video_3.style.opacity = '0%'
+                //     video_3.style.transition = 'opacity 1s ease-in-out .25s'
+                //     photodiary_4.style.opacity = '0%'
+                //     photodiary_4.style.transition = 'opacity 1s ease-in-out .1s'
 
-        }
+                // }
+
+
+
+
+
+
+
+
+
+
+
+
+
             // music_1.classList.remove('music_1--animIn')
             // merch_2.classList.remove('merch_2--animIn')
             // video_3.classList.remove('video_3--animIn')
