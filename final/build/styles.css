@@ -115,29 +115,26 @@ button.tire {
     transform: translateX(550px) scale(1) rotate(360deg);
   }
 
-
+button.tire:hover {
+    cursor: pointer;
+    /* transform:scale(1.1,1.1); */
+}
 
 .tire_expand {
-animation-name: tire_expand;
-  animation-duration: .25s;
-}
-
-@keyframes tire_expand {
-    0%   {    transform:scale(0,0); 
+    animation-name: tire_expand;
+      animation-duration: 1s;
     }
-    25%  {    transform:scale(1.1,1.1); 
+    
+    @keyframes tire_expand {
+        0%   {    transform:scale(1,1); 
+        }
+        25%  {    transform:scale(1.1,1.1); 
+        }
+        50%  {    transform:scale(1,1); 
+        }
+        100% {    transform:scale(1,1); 
+        }
     }
-    50%  {    transform:scale(0,0); 
-    }
-    100% {    transform:scale(0,0); 
-    }
-}
-
-/* button.tire:hover {
-    cursor: pointer;
-
-    transform:scale(1.1,1.1); 
-} */
 
 
 /* old rotate attempts */

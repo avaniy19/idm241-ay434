@@ -15,6 +15,11 @@
 
 
 
+//works but buggy when just hovering over the wheel.
+
+        // const container = document.querySelector('.container');
+        // const button = document.querySelector('.tire');
+
         const navObj = document.querySelector("#nav");
         const buttonObj = document.querySelector("#button");
         const tireObj = document.querySelector(".tire");
@@ -24,8 +29,15 @@
         const video_3 = document.querySelector('.video_3');
         const photodiary_4 = document.querySelector('.photodiary_4');
         
-       
-       
+        
+        // buttonObj.addEventListener("mouseon", () => {
+            
+        //   tireObj.classList.add("tire_expand");
+
+        // });
+
+
+       //click on tire
         buttonObj.addEventListener("click", () => {
             
           tireObj.classList.toggle("tire_move");
@@ -35,17 +47,8 @@
           video_3.classList.toggle("video_3--FADE");
           photodiary_4.classList.toggle("photodiary_4--FADE");
 
+
         });
-
-    
-
-
-
-        buttonObj.addEventListener("mouseenter", () => {
-            
-            tireObj.classList.add("tire_expand");
-  
-          });
 
         // const button__Roll = document.querySelector('.tireRoll');
 
