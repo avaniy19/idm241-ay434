@@ -1,200 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> 
-    <title>idm241 beta build</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"> 
+  <title>final idm241</title>
 </head>
 <body>
 
 <main>
 
-    <header>
-            <h1> menu microinteraction: <a href="https://www.szactrl.com/" target="_blank">szactrl.com</a> </h1>
-            
-    </header>
+  <header>
+      <h1> menu microinteraction: <a href="https://www.szactrl.com/" target="_blank">szactrl.com</a> </h1>
+      <h3> avani yatavelli <span class= "wheel-icon">&#9881; microinteractions final</h3>
+  </header>
 
-    <br>
+  <br>
+  
 
-    <div class="beta__build">
-        
-        <div class="container">
+  <div class="beta__build">
 
-            <div class="flex__container" id="nav">
+    <div class="container">
+  
+      <div class="flex__container" id="nav">
+  
+        <!-- tire image - click to start -->
+  
+        <button class="flex__child tire" id="button" type="button">
+  
+          <div>
+            <img src="images/tire.png" alt="tire">
+          </div>
+  
+        </button>
+  
 
-            <!-- tire image - click to start -->
+        <!-- menu items - appear after click -->
+  
+        <ul class="flex__child menu" id="menu">
+          <b>
 
-            <button class="flex__child tire"
-            id="button" type="button">
-                <div>
-                    <img src="images/tire.png" alt="tire">
-            </div>
+            <li class="music_1 menu__item" id="music_1">
+            <button class="menu_button">
+            music
             </button>
-            
-            <!-- menu items appear -->
+            </li>
+  
+            <li class="merch_2 menu__item" id="merch_2"> 
+            <button class="menu_button">
+            merch  
+            </button>
+            </li>
 
-                                <ul class="flex__child menu" id="menu">
+            <li class="video_3 menu__item" id="video_3"> 
+            <button class="menu_button">
+            video
+            </button>
+            </li>
 
-                                    <b>
+            <li class="photodiary_4 menu__item" id="photodiary_4"> 
+            <button class="menu_button">
+            photo diary     
+            </button>
+            </li>
 
-                                        <li class="music_1 menu__item color__change" id="music_1"> music </li>
-
-                                        <li class="merch_2 menu__item color__change" id="merch_2"> merch </li>
-
-                                        <li class="video_3 menu__item color__change" id="video_3"> video </li>
-
-                                        <li class="photodiary_4 menu__item color__change" id="photodiary_4"> photo diary </li>
-
-                                    </b>
-
-                                </ul>
-
-                    </div>
-
-        </div>
-
-</div>
+          </b>
+  
+        </ul>
+  
+      </div>
+  
+    </div>
+  
+  </div>
 
 
 <br>
 
+  <div class="description">
+    <!-- <h2> alpha description </h2> -->
 
+    <div class="section">
+      <div class="section__header">
+        <h4> 	
+            triggers : </h4>
+      </div>
+      
+          <ul>
 
-
-
-
-
-    
-    <div class="description">
-        <!-- <h2> alpha description </h2> -->
-
-        <div class="section">
-            <div class="section__header">
-                <h4> triggers : </h4>
-            </div>
-            
-                        <ul>
-                            <!-- <li> mouse <b>hover on</b> wheel </li> -->
-                            <li> mouse <b>hover on</b> menu items (music, merch, video, photo diary)</li>
-                        <br>
-                        <li> mouse <b>hover off</b> menu items (music, merch, video, photo diary)</li>
-                        <br>
-                            <li> mouse <b>click</b> wheel (toggle on)</li>
-                            <!-- <li> mouse <b>click</b> menu items (music, merch, video, photo diary) </li> -->
-                        <br>
-                        <br>
-                            <li> mouse <b>click</b> wheel (toggle off)</li>
-                            <!-- <li> mouse <b>click</b> menu items (music, merch, video, photo diary) </li> -->
-                        
-                            <!-- <li> mouse <b>hover off</b> wheel </li> -->
-                            <!-- <li> mouse <b>hover off</b> menu items (music, merch, video, photo diary)</li> -->
-                            <!-- <li> mouse <b>hover off</b> entire menu microinteraction </li> -->
-                            
-                        </ul>
-        </div>
-
-
-        <div class="section">
-
-            <div class="section__header">
-                <h4> rules : </h4>
-            </div>
-            
-
-                        <ul>
-                            <!-- <li> mouse <b>hover on wheel :</b> 
-                                <br>- cursor change to pointer
-                                <br>- wheel expands in size</li>  -->
-                            <li> mouse <b>hover on menu items (music, merch, video, photo diary) :</b> 
-                                <br>- cursor changes to pointer
-                                <br>- color change to green</li>
-                                
-                        <br>
-                            <li> mouse <b>click wheel (toggle on):</b>
-                                <br>- tire moves right & rotates 360 degrees
-                                <br>- menu items (music, merch, video, photo diary) fade in</li>
-
-                                <li> mouse <b>click wheel (toggle ff):</b>
-                                    <br>- tire moves left & rotates -360 degrees
-                                    <br>- menu items (music, merch, video, photo diary) fade out</li>
-                            <!-- <li> mouse <b>click menu items (music, merch, video, photo diary) </b>
-                                <br>- wheel expands in size </li> -->
-
-                        <br>
-                            <!-- <li> mouse <b>hover off</b> wheel 
-                                <br>- wheel decreases to original size</li> -->
-                            <li> mouse <b>hover off</b> menu items (music, merch, video, photo diary)
-                                <br>- changes cursor to arrow 
-                                <br>- color change back to original color</li>
-                            <!-- <li> mouse <b>hover off entire menu microinteraction :</b>
-                                <br>- tire moves left & rotates 360 degrees in reverse
-                                <br>- menu items (music, merch, video, photo diary) fade out</li> -->
-                            
+            <li> <b>hover on</b> menu items (music, merch, video, photo diary)</li>
+            <li> <b>hover off</b> menu items hover on menu items (music, merch, video, photo diary) </li>
+            <li> <b>click</b> menu items  menu items (music, merch, video, photo diary) </li>
+              <br>
+            <li>  <b>hover on</b> tire </li>
+            <li>  <b>hover off</b> tire </li>
+            <li> <b> click (toggle on)</b> tire </li>
+            <li> <b> click (toggle off)</b> tire </li>
+              
+              
             </ul>
-        </div>
+    </div>
 
-        
-        <div class="section">
-            
-            <div class="section__header">
-                <h4> feedback : </h4>
-            </div>
-            
+
+    <div class="section">
+
+      <div class="section__header">
+        <h4> rules  </h4>
+      </div>
+      
 
             <ul>
-                <!-- <li> mouse <b>hover on wheel :</b> 
-                    <br>- cursor change to pointer
-                    <br>- wheel expands in size</li>  -->
-                <li> mouse <b>hover on menu items (music, merch, video, photo diary) :</b> 
-                    <br>- cursor changes to pointer
-                    <br>- color change to green</li>
-                    
-            <br>
-                <li> mouse <b>click wheel (toggle on):</b>
-                    <br>- tire moves right & rotates 360 degrees
-                    <br>- menu items (music, merch, video, photo diary) fade in</li>
-
-                    <li> mouse <b>click wheel (toggle ff):</b>
-                        <br>- tire moves left & rotates -360 degrees
-                        <br>- menu items (music, merch, video, photo diary) fade out</li>
-                <!-- <li> mouse <b>click menu items (music, merch, video, photo diary) </b>
-                    <br>- wheel expands in size </li> -->
-
-            <br>
-                <!-- <li> mouse <b>hover off</b> wheel 
-                    <br>- wheel decreases to original size</li> -->
-                <li> mouse <b>hover off</b> menu items (music, merch, video, photo diary)
-                    <br>- changes cursor to arrow 
-                    <br>- color change back to original color</li>
-                <!-- <li> mouse <b>hover off entire menu microinteraction :</b>
-                    <br>- tire moves left & rotates 360 degrees in reverse
-                    <br>- menu items (music, merch, video, photo diary) fade out</li> -->
-                
-</ul>
-                        
-        </div> 
-       
-
-
-        <div class="section">
-
-            <div class="section__header">
-                <h4> loops + modes : </h4>
-            </div>
             
-                        <ul>
-                            <li>n/a</li>          
-                        </ul>
-        </div>
+              <li> <b>hover on</b> menu items (music, merch, video, photo diary) 
+                <br> - cursor changes to pointer
+                <br> - text color changes from  gray  to green
+                <br> - 5% increase in scale
+              </li>
+            
+              <li> <b>hover off</b> menu items (music, merch, video, photo diary)
+                <br> - cursor changes back to default
+                <br> - text color changes from green to gray 
+                <br> - 5% decrease in scale (back to default)
+              </li>
+
+              <li> <b> click </b> menu items (music, merch, video, photo diary)
+                <br> - 30% decrease in opacity
+                <br> - 5% decrease in scale (back to default)</li>
+
+            <br>
+
+            <li> <b>hover on</b> tire
+              <br> - cursor changes to pointer
+            </li>
+<li> <b>hover off</b> tire
+              <br> - cursor changes back to default
+            </li>
+            <br>
+
+            
+              
+              <li> <b> click (toggle on)</b>tire 
+                <br>- tire moves right 635 pixels, rotating 360 degrees 
+                <br>- menu items (music, merch, video, photo diary) fade in one by one, starting from the left</li>
+
+              <li> <b> click (toggle on)</b>tire 
+                <br>- tire moves left 635 pixels, rotating -360 degrees 
+                <br>- menu items (music, merch, video, photo diary) fade out one by one, starting from the right</li>
+              
+      </ul>
+    </div>
+
+    
+    <div class="section">
+      
+      <div class="section__header">
+        <h4> feedback : </h4>
+      </div>
+      
+      <ul>
+            
+        <li> <b>hover on</b> menu items (music, merch, video, photo diary) 
+          <br> - cursor changes to pointer
+          <br> - text color changes from  gray  to green
+          <br> - 5% increase in scale
+        </li>
+      
+        <li> <b>hover off</b> menu items (music, merch, video, photo diary)
+          <br> - cursor changes back to default
+          <br> - text color changes from green to gray 
+          <br> - 5% decrease in scale (back to default)
+        </li>
+
+        <li> <b> click </b> menu items (music, merch, video, photo diary)
+          <br> - 30% decrease in opacity
+          <br> - 5% decrease in scale (back to default)</li>
+
+      <br>
+
+      <li> <b>hover on</b> tire
+        <br> - cursor changes to pointer
+      </li>
+<li> <b>hover off</b> tire
+        <br> - cursor changes back to default
+      </li>
+      <br>
+
+      
+        
+        <li> <b> click (toggle on)</b>tire 
+          <br>- tire moves right 635 pixels, rotating 360 degrees 
+          <br>- menu items (music, merch, video, photo diary) fade in one by one, starting from the left</li>
+
+        <li> <b> click (toggle on)</b>tire 
+          <br>- tire moves left 635 pixels, rotating -360 degrees 
+          <br>- menu items (music, merch, video, photo diary) fade out one by one, starting from the right</li>
+        
+</ul>
+      
+        
+            
+    </div> 
+    
+
+
+    <div class="section">
+
+      <div class="section__header">
+        <h4> loops + modes : </h4>
+      </div>
+      
+            <ul>
+              <li>n/a</li>     
+            </ul>
+    </div>
 
 </div>
 <br>
-    <h4> images courtesy of <a href="https://www.szactrl.com/" target="_blank">szactrl.com</a> </h4>
+  <h4> images courtesy of <a href="https://www.szactrl.com/" target="_blank">szactrl.com</a> </h4>
+<br>
 </main>
 </body>
 
-            <script src="main.js"></script>
+      <script src="main.js"></script>
+    
 
 </html>

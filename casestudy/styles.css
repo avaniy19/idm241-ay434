@@ -1,0 +1,156 @@
+body {
+    background-color: #f7f5f2;
+    color: #2F2D2C;
+    font-family: Manrope, Helvetica, sans-serif;
+    text-align: center;
+    /* font-weight: 200; */
+    font-size: 18px;
+}
+.nav_bar {
+    margin: -10px;
+}
+
+.nav_bar ul{
+    list-style: none;
+    background: #DFDED3;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav_bar li{
+    display: inline-block;
+    
+}
+
+.nav_bar a {
+    text-decoration: none;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+
+a:link, a:visited, .nav_bar a:link, .nav_bar a:visited {
+    color: #2F2D2C;
+    text-decoration: #bab7ad;
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+    transition: opacity, font-weight .2s ease-in-out;
+}
+
+a:hover, .nav_bar a:hover{
+    opacity: 60%;
+    font-weight: 700;
+}
+
+
+h1 {
+    letter-spacing: 3px;
+    font-size: 50px;
+    line-height: 45px;
+        /* color:#456852; */
+}
+
+.info {
+    letter-spacing: 1.25px;
+    font-weight: 400;
+}
+
+ .section {
+     display: block;
+     text-align: center;
+     padding-left:30%;
+     padding-right: 30%;
+ }
+
+.section__header {
+    display: block;
+    text-align: left;
+    background: transparent;
+    border-radius: 10px;
+    height: 3px;
+    box-shadow: 0 28px 0 0 #DFDED3;
+}
+
+.image__header {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+    color:#456852;
+}
+
+h3 {
+    letter-spacing: 3px;
+
+}
+
+h4 {
+    font-weight: 400;
+    color: #625F40;
+    margin-top: 10px;
+    padding-left:25%;
+    padding-right: 25%;
+}
+
+.casestudy {
+    margin-top: 60px;
+}
+
+ul, ol, p{
+    display: block; 
+	text-align: left;
+    font-weight: 450;
+    color: #625F40;
+    letter-spacing: .5px;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 28px;
+    
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+img {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 30px;
+    border-color: #DFDED3;
+    padding: 25px;
+    margin: 10px;
+    max-width: 50%;
+}
+
+.original_gif, .alpha_gif, .beta_gif, .final_gif{
+    min-width: 100%;
+    padding:0;
+    border: none;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    img{
+        max-width: 80%;
+    }
+
+    .alpha_gif, .beta_gif, final {
+        max-width: 100%;
+    }
+
+    h4{
+        margin-bottom: -15px;
+    }
+
+    .section, h4 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    
+}
+
+
+

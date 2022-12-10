@@ -8,7 +8,7 @@
     src: url(fonts/Manrope-Regular.ttf);
   }
 
-/* description */
+/* descriptio styling */
 
 body {
     background-color: #f1ece5;
@@ -35,7 +35,7 @@ h1 {
 }
 
 
- .section {
+.section {
      display: block;
      text-align: center;
      padding-left:30%;
@@ -49,6 +49,24 @@ h1 {
     background-color: #C3B09E;
     border-radius: 25px;
 }
+
+.wheel-icon {
+    font-size: larger;
+    opacity: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.trigger_hover {
+    color:#5e833d;
+    text-decoration: #b4bfa9 wavy underline;
+}
+
+.trigger_click {
+    color:#336960;
+    text-decoration: #a5b5b7 wavy underline;
+}
+
 
 
 h4 {
@@ -66,7 +84,6 @@ ul, ol{
 li {
     margin-bottom: 5px;
 }
-
 
 /* micro interaction */
 .beta__build {
@@ -101,72 +118,36 @@ img {
 /* uncomment for final */
 
 button.tire {
-    /* display: inline-block; */
     position: relative;
     background-color: transparent;
     border: none;
+    left: -80px;
     transition-property: transform;
     transition-duration: 1.5s;
     transition-timing-function: ease;
-    /* transition: transform .5s ease-out .02s; */
+    
+}
+
+button.menu_button {
+    all: unset;
+}
+
+button.menu_button:active {
+    
+    /* color:#788D64; */
+    transition: opacity transform 0.25s ease;
+    opacity: 75%;
+    cursor: pointer!important;
+    transform:scale(.95,.95);
 }
 
 .tire_move {
-    transform: translateX(550px) scale(1) rotate(360deg);
-  }
-
+    transform: translateX(625px) rotate(360deg);
+}
+    
 button.tire:hover {
     cursor: pointer;
-    /* transform:scale(1.1,1.1); */
 }
-
-.tire_expand {
-    animation-name: tire_expand;
-      animation-duration: 1s;
-    }
-    
-    @keyframes tire_expand {
-        0%   {    transform:scale(1,1); 
-        }
-        25%  {    transform:scale(1.1,1.1); 
-        }
-        50%  {    transform:scale(1,1); 
-        }
-        100% {    transform:scale(1,1); 
-        }
-    }
-
-
-/* old rotate attempts */
-
-        /* @keyframes roll {
-
-        100% {
-            transform: rotate(360deg); 
-        }
-        }
-
-        /* @keyframes moveX {
-
-
-        100% {
-            transform: translateX(50px); 
-        }
-        } */
-
-
-/* .tire--roll {
-    animation: roll 1.25s ease-in-out 0s forwards;
-    animation: moveX 1.25s ease-in-out 0s forwards;
-    transform:rotate(360deg);
-    transition: transform 1s ease-out .1s;
-
-} */
-
-/* .tire--move {
-    transform: translateX(-50px);
-} */
-
 
 .menu {
     list-style: none;
@@ -176,146 +157,80 @@ button.tire:hover {
     margin-left: -100px;
 }
 
-
-
 .menu__item {
     opacity: 0;
+    color: #494949;
     display: inline-block;
     margin-right: 40px;
     font-size: 22px;
     vertical-align:middle;
+  
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 .music_1 {
     visibility: hidden;
 }
 
-.music_1 {
-    transition-property: visibility, opacity;
-    transition-duration: 1.5s;
-    /* transition-delay: .25s; */
-    transition-timing-function: ease-in-out;
-}
-
-.merch_2 {
-    transition-property: visibility, opacity;
-    transition-duration: 1.5s;
-    /* transition-delay: .5s; */
-    transition-timing-function: ease-in-out;
-}
-
-.video_3 {
-    transition-property: visibility, opacity;
-    transition-duration: 1.5s;
-    /* transition-delay: .75s; */
-    transition-timing-function: ease-in-out;
-}
-
-.photodiary_4 {
-    transition-property: visibility, opacity;
-    transition-duration: 1.5s;
-    /* transition-delay: 1s; */
-    transition-timing-function: ease-in-out;
-}
-
-
-/* FADE */
-.music_1--FADE {
+/* FADE IN*/
+.music_1--FADEin {
+    transition-delay: 0s;
     visibility: visible;
     opacity: 100%;
 }
 
-.merch_2--FADE {
+.merch_2--FADEin {
+    transition-delay: .2s;
     visibility: visible;
     opacity: 100%;
 }
 
-.video_3--FADE {
+.video_3--FADEin {
+    transition-delay: .5s;
     visibility: visible;
     opacity: 100%;
 }
 
-.photodiary_4--FADE {
+.photodiary_4--FADEin {
+    transition-delay: .7s;
     visibility: visible;
     opacity: 100%;
+}
+
+/* FADE OUT*/
+
+.music_1--FADEout {
+    transition-delay: .7s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.merch_2--FADEout {
+    transition-delay: .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.video_3--FADEout {
+    transition-delay: .2s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.photodiary_4--FADEout {
+    transition-delay: 0s;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .menu__item:hover {
     color:#788D64;
-    transition: color 0.75s ease;
+    transition: color, transform 0.25s ease;
     cursor: pointer!important;
-    transform:scale(1.1,1.1);
+    transform:scale(1.05,1.05);
 }
-
-/* each menu item fades in */
-
-@keyframes fadeIn {
-    0% { 
-        opacity: 0; 
-    }
-
-  100% {
-        opacity: 1; 
-}
-}
-
-@keyframes fadeOut {
-    0% { 
-        opacity: 1; 
-    }
-
-  100% {
-        opacity: 0; 
-}
-}
-
-
-/* PREVIOUSLY USED FOR BETA BUILD SUBMISSION */
-
-/* when tire is clicked */
-        /* .music_1--animIn {
-            display: inline-block;
-            animation: fadeIn 1.25s ease-in-out .25s forwards;
-        }
-
-        .merch_2--animIn {
-            display: inline-block;
-            animation: fadeIn 1.25s ease-in-out .5s forwards;
-        }
-
-        .video_3--animIn {
-            display: inline-block;
-            animation: fadeIn 1.25s ease-in-out .75s forwards;
-        }
-
-        .photodiary_4--animIn {
-            display: inline-block;
-            animation: fadeIn 1.25s ease-in-out 1s forwards;
-        } */
-
-/* when microinteraction is hover off (fade anim) */
-        /* .music_1--animOut {
-            display: inline-block;
-            animation: fadeOut 1.25s ease-in-out .1s forwards;
-        }
-
-        .merch_2--animOut {
-            display: inline-block;
-            animation: fadeOut 1.25s ease-in-out .75s forwards;
-        }
-
-        .video_3--animOut {
-            display: inline-block;
-            animation: fadeOut 1.25s ease-in-out .5s  forwards;
-        }
-
-        .photodiary_4--animOut {
-            display: inline-block;
-            animation: fadeOut 1.25s ease-in-out .25s forwards;
-        } */
-
-
-
 
 /* media queries: 800px only */
 
